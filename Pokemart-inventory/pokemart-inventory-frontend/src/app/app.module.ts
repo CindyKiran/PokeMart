@@ -6,16 +6,22 @@ import { AppComponent } from './app.component';
 import { ItemService } from './services/item.service';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { InventoryComponent } from './components/inventory/inventory.component';
+import { FormComponent } from './components/form/form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ItemComponent } from './components/item/item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InventoryComponent
+    InventoryComponent,
+    FormComponent,
+    ItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [ItemService],
   bootstrap: [AppComponent]

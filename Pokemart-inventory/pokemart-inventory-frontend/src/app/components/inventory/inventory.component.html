@@ -1,3 +1,4 @@
+<a [routerLink]="['/inventory/form']"><button>Submit new product</button></a>
 <div class="container">
     <table>
         <tr>
@@ -6,7 +7,7 @@
             <th>Model Number</th>
         </tr>
         <tr *ngFor="let item of items">
-            <td>{{item.name}}</td>
+            <td><a [routerLink]= "['/inventory/item', item.id]">{{item.name}}</a></td>
             <td>{{item.price}}</td>
             <td>{{item.model_number}}-{{item.model_ser}}</td>
         </tr>

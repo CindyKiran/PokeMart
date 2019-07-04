@@ -1,0 +1,40 @@
+<div class="container">
+    <form [formGroup]="itemForm" (ngSubmit)="submitRegistration()" novalidate>
+      <div *ngIf="validMessage != ''">
+        <h3 class="has-info">{{validMessage}}</h3>
+      </div>
+      <div class="form-group">
+        <label>Product Name</label>
+        <input type="text" class="form-control" formControlName="name" required autofocus/>
+      </div>
+      <div class="form-group">
+        <label>Serial Number</label>
+        <input type="email" class="form-control" formControlName="modelNumber" required/>
+      </div>
+      <div class="form-group">
+        <label>Store Price</label>
+        <input type="text" class="form-control" formControlName="price" required/>
+      </div>
+      <div class="form-group">
+            <label>Product Category</label>
+            <input type="text" class="form-control" formControlName="category" required/>
+      </div>
+      <div class="form-group">
+            <label>Currently in stock</label>
+            <input type="text" class="form-control" formControlName="stock" required/>
+      </div>
+      <div class="form-group">
+            <label>Specifics</label>
+            <input type="text" class="form-control" formControlName="specs" required/>
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <input type="text" class="form-control" formControlName="description" required/>
+      </div>
+      <div class="form-group">
+            <label>Add image filename of product</label>
+            <input type="text" class="form-control" formControlName="image" required/>
+      </div>
+      <button type="submit" class="btn btn-primary" >Submit</button>
+    </form>
+  </div>
