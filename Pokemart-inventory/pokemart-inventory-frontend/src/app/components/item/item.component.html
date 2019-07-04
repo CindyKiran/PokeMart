@@ -1,30 +1,27 @@
 <div class="container">
-    <div class="row">
-      <a class="btn btn=primary" routerLink="/inventory">Back to List</a>
-    </div>
-    <div>
+    <div class="itemInfo">
+      <img src="assets/images/{{item.image}}">
+      <h1 style="text-align: left">{{item.name}}</h1>
       <div class="form-group">
-        <label>Product Name</label>
+        <label id="caption">Product Name</label>
         <div class="form-control">{{item.name}}</div>
       </div>
       <div class="form-group">
-        <label>Price</label>
+        <label id="caption">Price</label>
         <div class="form-control">{{item.price}}</div>
       </div>
       <div class="form-group">
-        <label>Model Number</label>
+        <label id="caption">Model Number</label>
         <div class="form-control">{{item.model_number}}-{{item.model_ser}}</div>
       </div>
       <div class="form-group">
-        <label>Product Dimension</label>
-        <div class="form-control">{{itemReg.specs}</div>
+        <label id="caption">Product Dimension</label>
+        <div class="form-control">{{item.specs}}</div>
       </div>
       <div class="form-group">
-        <label>Description</label>
-        <div class="form-control">{{itemReg.description}}</div>
+        <label id="caption">Description</label>
+        <div class="form-control">{{item.description}}</div>
       </div>
-      <div class="form-group">
-        <div class="form-control">{{itemReg.image}}</div>
-      </div>
+      <app-go-back></app-go-back>
     </div>
   </div>

@@ -1,0 +1,9 @@
+form {
+    text-align: center;
+}
+
+label { 
+    display: block; 
+}
+
+input { width: 50%; heigth: 30px; }

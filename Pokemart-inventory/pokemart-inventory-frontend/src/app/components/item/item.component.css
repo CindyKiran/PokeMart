@@ -1,0 +1,14 @@
+#caption {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.form-control {
+    padding-bottom: 20px;
+}
+
+img{
+    width: 350px;
+    float: right;
+}

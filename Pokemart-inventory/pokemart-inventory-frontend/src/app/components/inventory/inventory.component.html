@@ -1,15 +1,19 @@
-<a [routerLink]="['/inventory/form']"><button>Submit new product</button></a>
+
 <div class="container">
+    <h1>PokéMart Inventory</h1>
     <table>
         <tr>
             <th>Product Name</th>
-            <th>Price</th>
+            <th>Category</th>
             <th>Model Number</th>
+            <th>In Stock</th>
         </tr>
         <tr *ngFor="let item of items">
             <td><a [routerLink]= "['/inventory/item', item.id]">{{item.name}}</a></td>
-            <td>{{item.price}}</td>
+            <td>{{item.category}}</td>
             <td>{{item.model_number}}-{{item.model_ser}}</td>
+            <td>{{item.stock}}</td>
         </tr>
     </table>
+    <a [routerLink]="['/inventory/form']"><button>Add product</button></a>
 </div>

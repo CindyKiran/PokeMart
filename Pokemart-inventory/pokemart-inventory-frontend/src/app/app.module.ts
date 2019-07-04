@@ -9,13 +9,15 @@ import { InventoryComponent } from './components/inventory/inventory.component';
 import { FormComponent } from './components/form/form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ItemComponent } from './components/item/item.component';
+import { GoBackComponent } from './components/go-back/go-back.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InventoryComponent,
     FormComponent,
-    ItemComponent
+    ItemComponent,
+    GoBackComponent
   ],
   imports: [
     BrowserModule,
