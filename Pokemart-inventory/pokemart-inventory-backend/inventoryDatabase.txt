@@ -9,7 +9,7 @@ CREATE TABLE
 		specs VARCHAR,
 		image VARCHAR,
 		model_number NUMERIC,
-		model_serie VARCHAR,
+		model_ser VARCHAR,
 		PRIMARY KEY (id)
 	);
 	
@@ -18,10 +18,8 @@ CREATE TABLE
 		next_val BIGINT
 	);
 	
-INSERT INTO item (id, name, price, category, stock, description, specs, image) 
-VALUES ();
 
-INSERT INTO item (id, name, price, category, stock, description, specs, image, model_number, model_serie) 
+INSERT INTO item (id, name, price, category, stock, description, specs, image, model_number, model_ser) 
 VALUES (
 	1,
 	'Poké Ball', 
@@ -36,7 +34,7 @@ VALUES (
 	
 );
 
-INSERT INTO item (id, name, price, category, stock, description, specs, image, model_number, model_serie) 
+INSERT INTO item (id, name, price, category, stock, description, specs, image, model_number, model_ser) 
 VALUES (
 	2, 
 	'Great Ball', 
@@ -50,7 +48,7 @@ VALUES (
 	'TL'
 );
 
-INSERT INTO item (id, name, price, category, stock, description, specs, image, model_number, model_serie) 
+INSERT INTO item (id, name, price, category, stock, description, specs, image, model_number, model_ser) 
 VALUES (
 	3, 
 	'Ultra Ball', 
@@ -67,5 +65,8 @@ VALUES (
 INSERT INTO hibernate_sequence (next_val) VALUES (4);
 
 ---------------
+INSERT INTO item (id, name, price, category, stock, description, specs, image) 
+VALUES ();
+
 
 INSERT INTO item (id, name, price, category, model_number, stock, description, specs, image) VALUES (0, 'Master Ball', 0, 'Unknown', 99999, 0, 'Can catch every Pokemon. Even already caught Pokemon', '0cm', 'masterball.jpg');

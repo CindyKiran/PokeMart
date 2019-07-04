@@ -16,15 +16,15 @@ public class Item {
     private Long id;
 
     //item properties
-    String name;
-    int price;
-    String category;
-    int stock;
-    String description;
-    String specs;
-    String image;
-    int model_number;
-    String model_ser;
+    private String name;
+    private int price;
+    private String category;
+    private int stock;
+    private String description;
+    private String specs;
+    private String image;
+    private int model_number;
+    private String model_ser;
 
     public Long getId() {
         return id;
