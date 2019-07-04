@@ -1,0 +1,71 @@
+CREATE TABLE
+	item(
+		id BIGINT NOT NULL,
+		name VARCHAR,
+		price NUMERIC,
+		category VARCHAR,
+		stock NUMERIC,
+		description VARCHAR,
+		specs VARCHAR,
+		image VARCHAR,
+		model_number NUMERIC,
+		model_serie VARCHAR,
+		PRIMARY KEY (id)
+	);
+	
+CREATE TABLE
+	hibernate_sequence(
+		next_val BIGINT
+	);
+	
+INSERT INTO item (id, name, price, category, stock, description, specs, image) 
+VALUES ();
+
+INSERT INTO item (id, name, price, category, stock, description, specs, image, model_number, model_serie) 
+VALUES (
+	1,
+	'Poké Ball', 
+	200, 
+	'pokeball',
+	898127, 
+	'A device for catching wild Pokémon. It is thrown like a ball at the target. It is designed as a capsule system', 
+	'8 x 8cm', 
+	'pokeball.jpg',
+	116,
+	'GG'
+	
+);
+
+INSERT INTO item (id, name, price, category, stock, description, specs, image, model_number, model_serie) 
+VALUES (
+	2, 
+	'Great Ball', 
+	600, 
+	'pokeball',
+	498730,
+	'A good, high-performance Ball that provides a higher Pokémon catch rate than a standard Poké Ball',
+	'8 x 8cm',
+	'greatball.jpg',
+	251,
+	'TL'
+);
+
+INSERT INTO item (id, name, price, category, stock, description, specs, image, model_number, model_serie) 
+VALUES (
+	3, 
+	'Ultra Ball', 
+	1200, 
+	'pokeball',
+	51298, 
+	'An ultra-performance Ball that provides a higher Pokémon catch rate than a Great Ball',
+	'8 x 8cm', 
+	'ultraball.jpg',
+	391,
+	'XP'
+);
+
+INSERT INTO hibernate_sequence (next_val) VALUES (4);
+
+---------------
+
+INSERT INTO item (id, name, price, category, model_number, stock, description, specs, image) VALUES (0, 'Master Ball', 0, 'Unknown', 99999, 0, 'Can catch every Pokemon. Even already caught Pokemon', '0cm', 'masterball.jpg');
