@@ -18,7 +18,8 @@ export class FormComponent implements OnInit {
   ngOnInit() {
     this.itemForm = new FormGroup({
       name: new FormControl('', Validators.required),
-      modelNumber: new FormControl('', Validators.required),
+      model_number: new FormControl('', Validators.required),
+      model_ser: new FormControl('', Validators.required),
       price: new FormControl('', Validators.required),
       specs: new FormControl('', Validators.required),
       stock: new FormControl('', Validators.required),
@@ -44,6 +45,5 @@ export class FormComponent implements OnInit {
       this.validMessage = "Error, form is not complete yet";
     }
   }
-
-
+  
 }

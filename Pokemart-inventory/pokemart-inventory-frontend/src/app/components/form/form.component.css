@@ -1,9 +1,62 @@
+.container {
+    width: 35%;
+    min-width: 450px;
+}
 form {
     text-align: center;
 }
 
-label { 
-    display: block; 
+input, label, textarea { 
+    box-sizing: border-box;
+    padding: 13px 27px 13px;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 22px;
+    font-weight: bold;    
+    width: 85%;
+    margin: 15px auto;
+    font-size: 14px;
+    font-family: inherit;
+    box-sizing: border-box;
+    display: flex;
 }
 
-input { width: 50%; heigth: 30px; }
+select {
+	outline: 0;
+	border: 0 !important;
+	background: #f1f1f1;
+}
+
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+
+/* Custom Select */
+.select {
+	position: relative;
+	display: flex;
+	width: 85%;
+    line-height: 3;
+	overflow: hidden;
+    border-radius: 22px;
+    margin: 15px auto;
+}
+select {
+	flex: 1;
+    padding: 13px 27px 13px;
+    color: inherit;
+    font-weight: bold;
+	cursor: pointer;
+}
+
+/* Arrow */
+.select::after {
+	content: '\25BC';
+	position: absolute;
+	top: -8px;
+	right: 0;
+	padding: 0 1em;
+	background: #f1f1f1;
+	cursor: pointer;
+}
