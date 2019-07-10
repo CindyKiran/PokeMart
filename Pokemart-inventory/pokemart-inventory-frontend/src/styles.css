@@ -2,39 +2,17 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #565656;
     font-size: 20px;
+    background-image: url("assets/images/bg5.png");
+    background-size: 100em;
 }
 
 a:link { text-decoration: none; color: #565656; }
 a:visited { color: #565656; }
 
-.background-image {
-    position: fixed;
-    z-index: 1;
-  
-    display: block;
-    background-image: url("assets/images/bg5.png");
-    background-size: 100%;
-    padding: 51%;
-    margin: -1% -1%;
-  
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-}
-  
-.content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-}
-
 h1 { text-align: center; }
 
 table { width:100% }
-
+    
 th {
     background-color: #52a1ff;
     color: white;
@@ -50,7 +28,7 @@ tr:hover { background-color: #ddd; }
     box-shadow: 2px 8px 13px rgba(0,0,0,0.3);
     width: 65%;
     min-width: 450px;
-    margin: auto;
+    margin: 30px auto;
     border-radius: 3px;
     box-sizing: border-box;
     padding: 20px 50px;
