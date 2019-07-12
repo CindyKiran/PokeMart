@@ -2,6 +2,7 @@
 All kinds of miniprojects about PokeMart
 
 Project: Poke Mart Inventory
+<br>
 ![Demo for PokeMart Inventory](Pokemart-inventory/demoInventory.gif)
 - Description: Simple list of current inventory in Poke Mart shop. You can add a new item to the list
 - Backend: SQL database, Maven, Hibernate and JPA, Spring Boot
