@@ -59,3 +59,19 @@ Route::get('/add-to-cart/{id}', [
     'uses' => 'ProductController@getAddToCart',
     'as' => 'product.addToCart'
 ]);
+
+Route::get('/shopping-cart', [
+    'uses' => 'ProductController@getCart',
+    'as' => 'product.shoppingCart'
+]);
+
+Route::get('/checkout',[
+    'uses' => 'ProductController@getCheckout',
+    'as' => 'checkout',
+    'middleware' => 'auth'
+]);
+
+Route::get('/payment',[
+    'uses' => 'ProductController@paid',
+    'as' => 'payment'
+]);

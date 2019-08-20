@@ -5,6 +5,11 @@
 @endsection
 
 @section('content')
+    @if(Session::has('success'))
+        <div>
+            {{Session::get('success')}}
+        </div>
+    @endif
     @foreach($products->chunk(3) as $productChunk)
         <div class="row">
             @foreach($productChunk as $product)
