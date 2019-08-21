@@ -21,6 +21,7 @@ class CreateOrdersTable extends Migration
             $table->text('address');
             $table->string('name');
             $table->string('payment_id');
+            $table->float('totalPrice'); 
         });
     }
 

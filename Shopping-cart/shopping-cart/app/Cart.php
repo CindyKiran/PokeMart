@@ -6,7 +6,7 @@ use Session;
 
 class Cart 
 {
-    public $items;
+    public $items = array();
     public $totalQty = 0;
     public $totalPrice = 0;
 
@@ -16,9 +16,6 @@ class Cart
             $this->items = $oldCart->items;
             $this->totalQty = $oldCart->totalQty;
             $this->totalPrice = $oldCart->totalPrice;
-        }
-        else {
-            $this->items = null;
         }
     }
 

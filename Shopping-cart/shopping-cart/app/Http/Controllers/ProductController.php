@@ -25,8 +25,6 @@ class ProductController extends Controller
         $cart->add($product, $product->id);
 
         $request->session()->put('cart', $cart);
-        //Session::put('cart', $cart);
-        //dd($request->session()->get('cart'));
         return redirect()->route('product.index');
     }
 
@@ -41,6 +39,7 @@ class ProductController extends Controller
             'totalPrice' => $cart->totalPrice
             ]
         );
+
     }
 
     public function getCheckout(){
@@ -48,25 +47,33 @@ class ProductController extends Controller
             return view('shop.shopping-cart');
         }
         $oldCart = Session::get('cart');
-        //dd($oldCart);
         $cart = new Cart($oldCart);
-        //dd($cart);
         $total = $cart->totalPrice; 
-        
-        return view('shop.checkout', ['total' => $total]);
+        $orderNumber = rand(1000000, 9999999);
+        Session::put('orderNumber', $orderNumber);
+
+        return view('shop.checkout', ['total' => $total, 'orderNumber' => $orderNumber]);
     }
 
     public function paid(Request $request){
-        //save order
+        //fill in order
         $order = new Order();
+        $oldCart = Session::get('cart');
+        $cart = new Cart($oldCart);
+        $fullname = $request->input('firstName'). " ". $request->input('lastName');
+        $place = $request->input('address') . ", " . $request->input('country');
+        $orderNumber = Session::get('orderNumber');
+
+        //send order to db
         $order->cart = serialize('cart'); //convert to string
-        $order->name = $request->input('name');
-        $order->address = $request->input('address');
-        $order->payment_id = 999;
+        $order->name = $fullname;
+        $order->address = $place;
+        $order->payment_id = $orderNumber; 
+        $order->totalPrice = $cart->totalPrice;
 
         Auth::user()->orders()->save($order);
 
-        //clear cart
+        //when order submitted
         Session::forget('cart');
         return redirect()->route('product.index')->with('success', 'Sucessfully purchased');
 
