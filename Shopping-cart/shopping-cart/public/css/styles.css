@@ -1,0 +1,26 @@
+
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+}
+  
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even){background-color: #f2f2f2}
+  
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#quantity{
+  display: inline-block;
+  background: #fafafa;
+  padding: 2px 7px;
+  border: 1px solid gainsboro;
+  border-radius: 16px;
+}

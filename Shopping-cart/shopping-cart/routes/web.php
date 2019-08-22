@@ -60,6 +60,21 @@ Route::get('/add-to-cart/{id}', [
     'as' => 'product.addToCart'
 ]);
 
+Route::get('/reduce/{id}', [
+    'uses' => 'ProductController@getReduceQty',
+    'as' => 'product.reduceQty'
+]);
+
+Route::get('/increase/{id}', [
+    'uses' => 'ProductController@getIncreaseQty',
+    'as' => 'product.increaseQty'
+]);
+
+Route::get('/remove/{id}', [
+    'uses' => 'ProductController@getRemoveItem',
+    'as' => 'product.removeItem'
+]);
+
 Route::get('/shopping-cart', [
     'uses' => 'ProductController@getCart',
     'as' => 'product.shoppingCart'

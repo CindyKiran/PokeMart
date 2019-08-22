@@ -34,12 +34,39 @@ class ProductController extends Controller
         }
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
+
         return view('shop.shopping-cart', [
             'products' => $cart->items,
             'totalPrice' => $cart->totalPrice
             ]
         );
+    }
 
+    public function getReduceQty($id){
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart= new Cart($oldCart);
+        $cart->reduceQty($id);
+
+        Session::put('cart', $cart);
+        return redirect()->route('product.shoppingCart');
+    }
+
+    public function getIncreaseQty($id){
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart= new Cart($oldCart);
+        $cart->increaseQty($id);
+
+        Session::put('cart', $cart);
+        return redirect()->route('product.shoppingCart');
+    }
+
+    public function getRemoveItem($id) {
+        $oldCart = Session::has('cart') ? Session::get('cart') : null;
+        $cart= new Cart($oldCart);
+        $cart->removeItem($id);
+
+        Session::put('cart', $cart);
+        return redirect()->route('product.shoppingCart');
     }
 
     public function getCheckout(){

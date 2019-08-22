@@ -12,8 +12,9 @@
             <th>Total Price</th>
         </tr>
         <tr>
-            <th>{{$order['created_at']}}</th>
-            <th>{{$order['payment_id']}}</th>
+            <td>{{$order['created_at']}}</td>
+            <td>{{$order['payment_id']}}</td>
+            <td>{{$order['totalPrice']}}</td>
         </tr>
     </table>
     @endforeach

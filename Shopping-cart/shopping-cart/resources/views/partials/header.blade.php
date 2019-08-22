@@ -4,22 +4,17 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
 
     <!--Shopping cart-->
     <a class="nav-link" href={{ route('product.shoppingCart') }}>
         <i class="fas fa-shopping-cart"></i> 
         Shopping cart
-        <span class="badge badge-info">
+        <span class="badge">
             {{ Session::has('cart') ? Session::get('cart')->totalQty : '' }} 
         </span>
     </a>
 
+    <!--User dropdown-->
     <div class="btn-group">
         <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-user"></i> User
