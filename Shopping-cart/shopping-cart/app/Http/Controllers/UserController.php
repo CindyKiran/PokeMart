@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
+use DB;
+use SebastianBergmann\Environment\Console;
 
 class UserController extends Controller
 {
@@ -15,12 +17,19 @@ class UserController extends Controller
     public function postSignup(Request $request){
         $this->validate($request, [
             'email' => 'email|required|unique:users|min:4',
-            'password' => 'required|min:4'
+            'password' => 'required|min:4',
+            'firstName' =>'required',
+            'lastName' => 'required'
         ]);
 
         $user = new User([
-            'email' => $request->input('email'),
-            'password' => bcrypt($request->input('password'))
+            'email'     => $request->input('email'),
+            'password'  => bcrypt($request->input('password')),
+            'firstName' => $request->input('firstName'),
+            'lastName'  => $request->input('lastName'),
+            'address'   => $request->input('address'),
+            'place'     => $request->input('place'),
+            'country'   => $request->input('country')
         ]);
         $user->save();
         
@@ -50,6 +59,7 @@ class UserController extends Controller
 
     public function getProfile(){
         $orders = Auth::user()->orders;
+        $user = Auth::user();
 
         //unserialize collection
         // $orders->transform(function($order, $key){
@@ -57,8 +67,8 @@ class UserController extends Controller
         //     return $order;
         // });
 
-        //dd($orders[0]);
-        return view('user.profile', ['orders' => $orders]);
+        //dd($orders);
+        return view('user.profile', ['orders' => $orders, 'user' => $user]);
     }
 
     public function getLogout(){

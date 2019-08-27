@@ -1,35 +1,29 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href={{ route('product.index')}}>Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-
-    <!--Shopping cart-->
-    <a class="nav-link" href={{ route('product.shoppingCart') }}>
-        <i class="fas fa-shopping-cart"></i> 
-        Shopping cart
-        <span class="badge">
-            {{ Session::has('cart') ? Session::get('cart')->totalQty : '' }} 
-        </span>
+<div class="navbar">
+    <a href="{{ route('product.index') }}">
+        <img src="https://github.com/CindyKiran/PokeMart/blob/master/Images/logo-mini.jpg?raw=true" style="width:250px; float: left;">
     </a>
 
-    <!--User dropdown-->
     <div class="btn-group">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-user"></i> User
-        </button>
-        <div class="dropdown-menu dropdown-menu-lg-right">
+        <!--Shopping cart-->
+         <a href={{ route('product.shoppingCart') }} class="nav-link">
+            <i class="fas fa-shopping-cart"></i> 
+            Shopping cart
+            @if(Session::has('cart'))
+                <span class="badge"> {{Session::get('cart')->totalQty}} </span>
+            @endif 
+        </a>
+
+        <!--Others-->
             <!--If User is successfully signed in-->
             @if(Auth::check())
-                <a href="{{ route('user.profile') }}"><button class="dropdown-item" type="button">Profile</button></a>
-                <a href="{{ route('user.logout') }}"><button class="dropdown-item" type="button">Logout</button></a>
+                <a href="{{ route('user.profile') }}" class="nav-link">Profile</a>
+                <a href="{{ route('user.logout') }}" class="nav-link">Logout</a>
 
             <!--If User is not signed in-->
             @else
-                <a href="{{ route('user.signup') }}"><button class="dropdown-item" type="button">Signup</button></a>
-                <a href="{{ route('user.signin') }}"><button class="dropdown-item" type="button">Signin</button></a>
+                <a href="{{ route('user.signup') }}" class="nav-link">Signup</a>
+                <a href="{{ route('user.signin') }}" class="nav-link">Signin</a>
             @endif
         </div>
     </div>
-</nav>
+</div>
