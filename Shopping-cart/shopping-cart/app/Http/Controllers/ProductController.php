@@ -88,7 +88,7 @@ class ProductController extends Controller
         $oldCart = Session::get('cart');
         $cart = new Cart($oldCart);
         $fullname = $request->input('firstName'). " ". $request->input('lastName');
-        $place = $request->input('address') . ", " . $request->input('country');
+        $place = $request->input('address') . ", " . $request->input('place') . ", " . $request->input('country') ;
         $orderNumber = Session::get('orderNumber');
 
         //send order to db

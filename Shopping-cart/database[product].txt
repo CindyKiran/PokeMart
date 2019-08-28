@@ -1,0 +1,24 @@
+INSERT INTO `products` (`id`, `created_at`, `updated_at`, `imagePath`, `name`, `description`, `price`)      VALUES (NULL, NULL, NULL, 
+'https://github.com/CindyKiran/PokeMart/blob/master/Images/Products/Basic/pokeball.jpg?raw=true', 
+'Poké Ball', 
+'A device for catching wild Pokémon', 
+'200');
+
+INSERT INTO `products` (`id`, `created_at`, `updated_at`, `imagePath`, `name`, `description`, `price`)      VALUES (NULL, NULL, NULL, 
+'https://github.com/CindyKiran/PokeMart/blob/master/Images/Products/Basic/greatball.jpg?raw=true', 
+'Great Ball', 
+'Poké Ball that provides a higher Pokémon catch rate than a standard Poké Ball', 
+'600');
+
+INSERT INTO `products` (`id`, `created_at`, `updated_at`, `imagePath`, `name`, `description`, `price`)      VALUES (NULL, NULL, NULL, 
+'https://github.com/CindyKiran/PokeMart/blob/master/Images/Products/Basic/ultraball.jpg?raw=true', 
+'Ultra Ball', 
+' Poké Ball that provides a higher success rate for catching Pokémon than a Great Ball', 
+'1200');
+
+INSERT INTO `products` (`id`, `created_at`, `updated_at`, `imagePath`, `name`, `description`, `price`)      VALUES (NULL, NULL, NULL, 
+'https://github.com/CindyKiran/PokeMart/blob/master/Images/Products/Basic/masterball.jpg?raw=true', 
+'Master Ball', 
+' The best Poké Ball with the ultimate level of performance. With it, you will catch any wild Pokémon without fail', 
+'0');
+
