@@ -1,7 +1,6 @@
+
 <div class="navbar">
-    <a href="{{ route('product.index') }}">
-        <img src="https://github.com/CindyKiran/PokeMart/blob/master/Images/logo-mini.jpg?raw=true" style="width:250px; float: left;">
-    </a>
+    <span style="font-size:36px;">POKEMART</span>
 
     <div class="btn-group">
         <!--Shopping cart-->
@@ -24,6 +23,6 @@
                 <a href="{{ route('user.signup') }}" class="nav-link">Signup</a>
                 <a href="{{ route('user.signin') }}" class="nav-link">Signin</a>
             @endif
-        </div>
     </div>
 </div>
+<img src="https://github.com/CindyKiran/PokeMart/blob/master/Images/Background/bg8.jpg?raw=true" style="width: -webkit-fill-available; margin-top:-61px;">

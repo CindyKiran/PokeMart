@@ -59,8 +59,9 @@ input{
 }
 
 .navbar{
-  background: #51a0ff;
+  background: rgba(0,0,0, 0.7);
   height: 60px;
+  opacity: 0.9;
 }
 
 .btn-group{
