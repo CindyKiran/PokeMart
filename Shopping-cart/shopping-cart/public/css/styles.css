@@ -59,14 +59,43 @@ input{
 }
 
 .navbar{
-  background: rgba(0,0,0, 0.7);
-  height: 60px;
-  opacity: 0.9;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin:-6px;
 }
 
-.btn-group{
-  float:right;
+#title{
+  color: white;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 0 16px;
+  text-decoration: none;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
 
 button, .btn {
   background-color: #51a0ff;
@@ -77,14 +106,8 @@ button, .btn {
   border: none;
 }
 
-.nav-link{
-  display:inline-block;
-  padding: 19px;
-  color:white;
-}
-
-.nav-link:hover, .btn:hover {
-background-color: #4b8fe0;
+button:hover, .btn:hover {
+  background-color: #2c82a1;;
 }
 
 .badge{
@@ -107,10 +130,6 @@ background-color: #4b8fe0;
   box-shadow: 0px 0px 18px -10px #a1a1a1;
 }
 
-.orderSuccess{
-
-}
-
 #total{
   border-top: 1px solid grey;
   width: 50%;
@@ -130,4 +149,11 @@ background-color: #4b8fe0;
 .card{
   width: 33%;
   height: unset;
+}
+
+.orderSuccess{
+    color: #4e4e4e;
+    background-color: #90dc93;
+    border: 1px solid #06be06;
+    border-radius: 6px;
 }

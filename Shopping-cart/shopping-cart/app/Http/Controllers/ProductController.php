@@ -102,7 +102,7 @@ class ProductController extends Controller
 
         //when order submitted
         Session::forget('cart');
-        return redirect()->route('product.index')->with('success', 'Sucessfully purchased');
+        return redirect()->route('product.index')->with('success', 'Successfully purchased');
 
     }
 }
