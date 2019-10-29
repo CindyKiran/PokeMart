@@ -31,5 +31,8 @@ public class ItemsController {
         return itemRepository.getOne(id);
     }
 
-
+    @DeleteMapping("/{id}")
+    public void deleteItem(@PathVariable long id) {
+        itemRepository.deleteById(id);
+    }
 }

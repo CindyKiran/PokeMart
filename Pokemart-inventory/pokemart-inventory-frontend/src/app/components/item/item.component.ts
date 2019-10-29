@@ -25,5 +25,15 @@ export class ItemComponent implements OnInit {
     );
   }
 
+  removeItem(){
+    this.itemService.removeItem(this.route.snapshot.params.id).subscribe(
+      data => {
+        this.item = data;
+      },
+      err => console.error(err)
+    );
+    window.history.back();
+  }
+
 
 }

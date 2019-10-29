@@ -21,6 +21,10 @@ export class ItemService {
     let body = JSON.stringify(item);
     return this.http.post('/server/inventory/items', body, httpOption);
   }
+
+  removeItem(id: number){
+    return this.http.delete('/server/inventory/items/'+ id);
+  }
 }
 
 //Needed for addItem method
